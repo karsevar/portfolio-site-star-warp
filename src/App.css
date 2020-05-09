@@ -1,0 +1,159 @@
+/* .App {
+  text-align: center;
+} */
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* .App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+body {
+  /* position: fixed; */
+  /* display: block; */
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+}
+/* .stretch {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  
+  overflow: auto;
+} */
+#crawl-container {
+  padding: 0;
+  margin: 0;
+  perspective: calc(100vh * 0.4);
+  height: 600px;
+  width: 749px;
+  z-index: 1;
+  position: fixed;
+  overflow: hidden;
+  top: 1;
+}
+#crawl {
+  color: #f5c91c;
+  position: absolute;
+  width: 110%;
+  left: -5%;
+  bottom: -5%;
+  height: 200%;
+  overflow: hidden;
+
+  transform: rotate3d(1, 0, 0, 45deg);
+  transform-origin: 50% 100%;
+
+  mask-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.66),
+    rgba(0, 0, 0, 1)
+  );
+
+  -webkit-mask-image: -webkit-linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.66),
+    rgba(0, 0, 0, 1)
+  );
+}
+
+#crawl-content {
+  font-family: "Roboto";
+  font-size: calc(100vw * 0.074);
+  letter-spacing: 0.09em;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+#crawl p {
+  text-align: justify;
+  width: 100%;
+  margin: 0 0 1.25em 0;
+  line-height: 1.25em;
+}
+
+#crawl h1 {
+  font-size: 1em;
+  margin: 0 0 0.3em 0;
+}
+
+#crawl h2 {
+  font-size: 1.5em;
+  margin: 0 0 0.7em 0;
+}
+
+#crawl h1,
+#crawl h2 {
+  text-align: center;
+}
+
+#crawl .svg-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-bottom: 1.4em;
+  margin-bottom: 2.5em;
+}
+
+#crawl .svg-logo-subheader {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.scrollable {
+  height: 5000px;
+  width: 100%;
+  position: relative;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

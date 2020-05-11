@@ -2,13 +2,39 @@ import React, { useState, useEffect } from "react";
 import NameLogo from "../images/coollogo_com-72345118.svg";
 import ProfessionLogo from "../images/coollogo_com-209701667.svg";
 import { ReactComponent as AboutSVG } from "../images/coollogo_com-220706091.svg";
+import { ReactComponent as TechStackSVG } from "../images/coollogo_com-3960500.svg";
+import { ReactComponent as PythonLogo } from "../images/python-brands.svg";
+import { ReactComponent as RLogo } from "../images/r-project-brands.svg";
+import { ReactComponent as NodeLogo } from "../images/node-brands.svg";
+import { ReactComponent as ReactLogo } from "../images/react-brands.svg";
+import { ReactComponent as JSLogo } from "../images/js-brands.svg";
+
 function AboutComponent(props) {
   return (
     <div className='about-container'>
       <img src={NameLogo} className='svg-logo' />
       <img src={ProfessionLogo} className='svg-logo-subheader' />
       <fieldset className='about-subcontainer'>
-        <legend>TechStack</legend>
+        <legend>
+          <TechStackSVG />
+        </legend>
+        <div className='languages-container'>
+          <div className='language'>
+            <PythonLogo />
+          </div>
+          <div className='language'>
+            <RLogo />
+          </div>
+          <div className='language'>
+            <NodeLogo />
+          </div>
+          <div className='language'>
+            <ReactLogo />
+          </div>
+          <div className='language'>
+            <JSLogo />
+          </div>
+        </div>
       </fieldset>
       <fieldset className='about-subcontainer'>
         <legend>

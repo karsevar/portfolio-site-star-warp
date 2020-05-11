@@ -172,6 +172,17 @@ canvas {
   width: 100%;
 }
 
+.languages-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.language svg {
+  width: 100px;
+  height: 100px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

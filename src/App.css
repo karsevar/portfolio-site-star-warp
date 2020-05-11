@@ -55,7 +55,7 @@ canvas {
   padding: 0;
   margin: 0;
   perspective: calc(100vh * 0.4);
-  height: 600px;
+  height: 1000px;
   width: 749px;
   z-index: 1;
   position: fixed;
@@ -90,7 +90,7 @@ canvas {
 #crawl-content {
   font-family: "Roboto";
   font-size: calc(100vw * 0.074);
-  letter-spacing: 0.09em;
+  /* letter-spacing: 0.09em; */
   position: absolute;
   top: 0px;
   left: 0px;
@@ -100,8 +100,9 @@ canvas {
 #crawl p {
   text-align: justify;
   width: 100%;
-  margin: 0 0 1.25em 0;
-  line-height: 1.25em;
+  /* margin: 0 0 1.25em 0; */
+  line-height: 1.05em;
+  font-size: 0.8em;
 }
 
 #crawl h1 {
@@ -140,13 +141,35 @@ canvas {
 }
 
 .scrollable {
-  height: 5000px;
+  height: 100000px;
   width: 100%;
   position: relative;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.about-subcontainer {
+  width: 80%;
+  /* will need to take this out later */
+  border-width: 10px 10px 10px 10px;
+  border-color: #f5c91c;
+  border-style: solid;
+  border-radius: 10px;
+  margin-left: 0.5em;
+  margin-bottom: 1em;
+}
+
+.about-subcontainer .svg-divider {
+  height: auto;
+  /* position: absolute; */
+  align-items: center;
+  right: 0;
+}
+
+.svg-divider svg {
+  width: 100%;
 }
 
 @keyframes App-logo-spin {

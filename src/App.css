@@ -183,6 +183,159 @@ canvas {
   height: 100px;
 }
 
+.project-content {
+  width: 80%;
+  /* will need to take this out later */
+  border-width: 10px 10px 10px 10px;
+  border-color: #f5c91c;
+  border-style: solid;
+  border-radius: 10px;
+  margin-left: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* Navigation button styles */
+.cn-button {
+  border: none;
+  background: none;
+  color: #f06060;
+  text-align: center;
+  font-size: 1.8em;
+  padding-bottom: 0.5em;
+  padding-right: 1.25em;
+  height: 3.5em;
+  width: 3.5em;
+  background-color: #fff;
+  position: fixed;
+  left: 95%;
+  top: 20%;
+  margin-left: -1em;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 11;
+}
+
+/* Navigation menu */
+.cn-button:hover,
+.cn-button:active,
+.cn-button:focus {
+  color: #aa1010;
+}
+
+.cn-wrapper {
+  padding-bottom: 0.5em;
+  padding-right: 1.25em;
+  font-size: 1em;
+  width: 26em;
+  height: 26em;
+  overflow: hidden;
+  position: fixed;
+  z-index: 10;
+  top: -20%;
+  left: 72%;
+  border-radius: 50%;
+  margin-left: 4em;
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  transform: scale(0.1);
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cn-wrapper li {
+  position: absolute;
+  font-size: 1.5em;
+  width: 10em;
+  height: 10em;
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  overflow: hidden;
+  left: 50%;
+  /* bottom: -2.5em; */
+  margin-top: -1.3em;
+  margin-left: -10em;
+  -webkit-transition: border 0.3s ease;
+  -moz-transition: border 0.3s ease;
+  transition: border 0.3s ease;
+}
+
+.cn-wrapper li a {
+  display: block;
+  font-size: 1.18em;
+  height: 14.5em;
+  width: 14.5em;
+  position: absolute;
+  bottom: -7.25em;
+  right: -7.25em;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  padding-top: 1.8em;
+  text-align: center;
+  /* -webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
+  -ms-transform: skew(-50deg) rotate(-70deg) scale(1);
+  -moz-transform: skew(-50deg) rotate(-70deg) scale(1); */
+  transform: skew(-30deg) rotate(-50deg) scale(1);
+  /* -webkit-transition: opacity 0.3s, color 0.3s;
+  -moz-transition: opacity 0.3s, color 0.3s; */
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.cn-wrapper li a span {
+  font-size: 1.1em;
+  opacity: 0.7;
+}
+
+/* for a central angle x, the list items must be skewed by 90-x degrees
+in our case x=40deg so skew angle is 50deg
+items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
+
+.cn-wrapper li:first-child {
+  /* -webkit-transform: rotate(-10deg) skew(50deg);
+  -ms-transform: rotate(-10deg) skew(50deg);
+  -moz-transform: rotate(-10deg) skew(50deg); */
+  transform: rotate(-40deg) skew(50deg);
+}
+
+.cn-wrapper li:nth-child(2) {
+  /* -webkit-transform: rotate(30deg) skew(50deg);
+  -ms-transform: rotate(30deg) skew(50deg);
+  -moz-transform: rotate(30deg) skew(50deg); */
+  transform: rotate(0deg) skew(50deg);
+}
+
+.cn-wrapper li:nth-child(3) {
+  /* -webkit-transform: rotate(70deg) skew(50deg);
+  -ms-transform: rotate(70deg) skew(50deg);
+  -moz-transform: rotate(70deg) skew(50deg); */
+  transform: rotate(39deg) skew(50deg);
+}
+
+.cn-wrapper li:nth-child(odd) a {
+  background-color: #a11313;
+  background-color: hsla(0, 88%, 63%, 1);
+}
+
+.cn-wrapper li:nth-child(even) a {
+  background-color: #a61414;
+  background-color: hsla(0, 88%, 65%, 1);
+}
+
+/* Open menu state */
+.opened-nav {
+  border-radius: 50%;
+  pointer-events: auto;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

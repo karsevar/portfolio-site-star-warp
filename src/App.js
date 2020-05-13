@@ -3,6 +3,7 @@ import "./App.css";
 import StarWarpComponent from "./components/starWarpComponent";
 import ScrollComponent from "./components/scrollComponent";
 import AboutComponent from "./components/aboutComponent";
+import ProjectsComponent from "./components/projectsComponent";
 
 function App() {
   const [crawlPos, setCrawlPos] = useState(0);
@@ -48,9 +49,36 @@ function App() {
         className='App'
         style={{ width: canvasStyle.width, height: canvasStyle.height }}
       >
+        {/* Navigation menu circular code */}
+        {/* <div class='component'>
+          <button class='cn-button' id='cn-button'>
+            +
+          </button>
+          <div class='cn-wrapper opened-nav' id='cn-wrapper'>
+            <ul>
+              <li>
+                <a href='#'>
+                  <span class='icon-picture'></span>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <span class='icon-headphones'></span>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <span class='icon-home'></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div id='cn-overlay' class='cn-overlay'></div>
+        </div> */}
         <div id='crawl' ref={crawlRef}>
           <div id='crawl-content' style={{ top: `${crawlPos}px` }}>
             <AboutComponent />
+            <ProjectsComponent />
           </div>
         </div>
       </div>

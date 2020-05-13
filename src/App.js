@@ -4,12 +4,21 @@ import StarWarpComponent from "./components/starWarpComponent";
 import ScrollComponent from "./components/scrollComponent";
 import AboutComponent from "./components/aboutComponent";
 import ProjectsComponent from "./components/projectsComponent";
+import { ReactComponent as UserSVG } from "./images/user-alt-solid.svg";
+import { ReactComponent as ProjectSVG } from "./images/project-diagram-solid.svg";
+import { ReactComponent as EmailSVG } from "./images/envelope-open-text-solid.svg";
 
 function App() {
   const [crawlPos, setCrawlPos] = useState(0);
   const [scroll, setScroll] = useState(0);
   const crawlRef = useRef(null);
   const [canvasStyle, canvasStyleSet] = useState({ width: 0, height: 0 });
+  const [navBoolean, setNavBoolean] = useState(false);
+
+  const handleNavClick = () => {
+    console.log("Navigation circle was clicked");
+    setNavBoolean(!navBoolean);
+  };
 
   // main scroll logic for the application:
   const moveCrawl = (distance) => {
@@ -50,31 +59,41 @@ function App() {
         style={{ width: canvasStyle.width, height: canvasStyle.height }}
       >
         {/* Navigation menu circular code */}
-        {/* <div class='component'>
-          <button class='cn-button' id='cn-button'>
-            +
+        <div class='component'>
+          <button
+            class='cn-button'
+            id='cn-button'
+            onClick={() => handleNavClick()}
+          >
+            {navBoolean ? "-" : "+"}
           </button>
-          <div class='cn-wrapper opened-nav' id='cn-wrapper'>
+          <div
+            class={navBoolean ? "cn-wrapper opened-nav" : "cn-wrapper"}
+            id='cn-wrapper'
+          >
             <ul>
               <li>
                 <a href='#'>
-                  <span class='icon-picture'></span>
+                  {/* <span class='icon-picture'></span> */}
+                  <ProjectSVG />
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <span class='icon-headphones'></span>
+                  {/* <span class='icon-headphones'></span> */}
+                  <UserSVG />
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <span class='icon-home'></span>
+                  {/* <span class='icon-home'></span> */}
+                  <EmailSVG />
                 </a>
               </li>
             </ul>
           </div>
           <div id='cn-overlay' class='cn-overlay'></div>
-        </div> */}
+        </div>
         <div id='crawl' ref={crawlRef}>
           <div id='crawl-content' style={{ top: `${crawlPos}px` }}>
             <AboutComponent />

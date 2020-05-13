@@ -201,15 +201,15 @@ canvas {
   color: #f06060;
   text-align: center;
   font-size: 1.8em;
-  padding-bottom: 0.5em;
-  padding-right: 1.25em;
+  padding-top: 1em;
   height: 3.5em;
   width: 3.5em;
   background-color: #fff;
   position: fixed;
-  left: 95%;
-  top: 20%;
+  left: 50%;
+  top: -1em;
   margin-left: -1em;
+  margin-top: -0.5em;
   border-radius: 50%;
   cursor: pointer;
   z-index: 11;
@@ -231,10 +231,10 @@ canvas {
   overflow: hidden;
   position: fixed;
   z-index: 10;
-  top: -20%;
-  left: 72%;
+  left: 50%;
+  top: -15em;
+  margin-left: -12em;
   border-radius: 50%;
-  margin-left: 4em;
   -webkit-transform: scale(0.1);
   -ms-transform: scale(0.1);
   -moz-transform: scale(0.1);
@@ -256,7 +256,7 @@ canvas {
   transform-origin: 100% 100%;
   overflow: hidden;
   left: 50%;
-  /* bottom: -2.5em; */
+  /* top: 50%; */
   margin-top: -1.3em;
   margin-left: -10em;
   -webkit-transition: border 0.3s ease;
@@ -270,8 +270,8 @@ canvas {
   height: 14.5em;
   width: 14.5em;
   position: absolute;
-  bottom: -7.25em;
-  right: -7.25em;
+  bottom: -11em;
+  right: -6em;
   border-radius: 50%;
   text-decoration: none;
   color: #fff;
@@ -280,10 +280,18 @@ canvas {
   /* -webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
   -ms-transform: skew(-50deg) rotate(-70deg) scale(1);
   -moz-transform: skew(-50deg) rotate(-70deg) scale(1); */
-  transform: skew(-30deg) rotate(-50deg) scale(1);
+  /* transform: skew(-30deg) rotate(-60deg) scale(1); */
   /* -webkit-transition: opacity 0.3s, color 0.3s;
   -moz-transition: opacity 0.3s, color 0.3s; */
   transition: opacity 0.3s, color 0.3s;
+}
+
+.cn-wrapper li a svg {
+  transform: skew(-44deg) rotate(120deg) scale(1);
+  width: 50px;
+  height: 50px;
+  padding-left: 2em;
+  fill-opacity: 1;
 }
 
 .cn-wrapper li a span {
@@ -299,31 +307,31 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
   /* -webkit-transform: rotate(-10deg) skew(50deg);
   -ms-transform: rotate(-10deg) skew(50deg);
   -moz-transform: rotate(-10deg) skew(50deg); */
-  transform: rotate(-40deg) skew(50deg);
+  transform: rotate(-150deg) skew(50deg);
 }
 
 .cn-wrapper li:nth-child(2) {
   /* -webkit-transform: rotate(30deg) skew(50deg);
   -ms-transform: rotate(30deg) skew(50deg);
   -moz-transform: rotate(30deg) skew(50deg); */
-  transform: rotate(0deg) skew(50deg);
+  transform: rotate(-110deg) skew(50deg);
 }
 
 .cn-wrapper li:nth-child(3) {
   /* -webkit-transform: rotate(70deg) skew(50deg);
   -ms-transform: rotate(70deg) skew(50deg);
   -moz-transform: rotate(70deg) skew(50deg); */
-  transform: rotate(39deg) skew(50deg);
+  transform: rotate(-70deg) skew(50deg);
 }
 
 .cn-wrapper li:nth-child(odd) a {
-  background-color: #a11313;
-  background-color: hsla(0, 88%, 63%, 1);
+  background-color: #4b4b4c;
+  /* background-color: hsla(0, 88%, 63%, 1); */
 }
 
 .cn-wrapper li:nth-child(even) a {
-  background-color: #a61414;
-  background-color: hsla(0, 88%, 65%, 1);
+  background-color: #989898;
+  /* background-color: hsla(0, 88%, 65%, 1); */
 }
 
 /* Open menu state */

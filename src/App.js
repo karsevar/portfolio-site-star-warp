@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Route, Link } from "react-router-dom";
+
 import "./App.css";
 import StarWarpComponent from "./components/starWarpComponent";
 import ScrollComponent from "./components/scrollComponent";
@@ -73,16 +75,16 @@ function App() {
           >
             <ul>
               <li>
-                <a href='#'>
+                <Link to='/projects'>
                   {/* <span class='icon-picture'></span> */}
                   <ProjectSVG />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#'>
+                <Link to='/'>
                   {/* <span class='icon-headphones'></span> */}
                   <UserSVG />
-                </a>
+                </Link>
               </li>
               <li>
                 <a href='#'>
@@ -96,8 +98,10 @@ function App() {
         </div>
         <div id='crawl' ref={crawlRef}>
           <div id='crawl-content' style={{ top: `${crawlPos}px` }}>
-            <AboutComponent />
-            <ProjectsComponent />
+            <Route exact path='/' component={AboutComponent} />
+            <Route path='/projects' component={ProjectsComponent} />
+            {/* <AboutComponent />
+            <ProjectsComponent /> */}
           </div>
         </div>
       </div>

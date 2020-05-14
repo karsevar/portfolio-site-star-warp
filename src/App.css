@@ -334,6 +334,12 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
   /* background-color: hsla(0, 88%, 65%, 1); */
 }
 
+/* hover style */
+.csstransforms .cn-wrapper li a:hover {
+  background-color: #b31515;
+  background-color: hsla(0, 88%, 70%, 1);
+}
+
 /* Open menu state */
 .opened-nav {
   border-radius: 50%;

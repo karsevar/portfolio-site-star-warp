@@ -260,6 +260,14 @@ canvas {
   color: black;
 }
 
+.project-view-container {
+  width: 80%;
+  background-color: grey;
+  position: fixed;
+  left: 10%;
+  top: 1em;
+}
+
 /* Navigation button styles */
 .cn-button {
   border: none;

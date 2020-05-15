@@ -40,7 +40,12 @@ function App() {
   };
 
   useEffect(() => {
-    setCrawlPos(crawlRef.current.clientHeight);
+    console.log("crawlRef.current.clientHeight", crawlRef.current.clientHeight);
+    if (crawlRef.current.clientHeight == 0) {
+      setCrawlPos(550);
+    } else {
+      setCrawlPos(crawlRef.current.clientHeight - 400);
+    }
     requestAnimationFrame(init);
 
     const handleScroll = (e) => {
@@ -102,6 +107,7 @@ function App() {
           ref={crawlRef}
           style={transformBoolean ? { transform: "none" } : {}}
         >
+          {/* {console.log("crawlRef variables", crawlRef.current.clientHeight)} */}
           <div id='crawl-content' style={{ top: `${crawlPos}px` }}>
             <Route exact path='/' component={AboutComponent} />
             <Route

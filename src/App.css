@@ -262,10 +262,56 @@ canvas {
 
 .project-view-container {
   width: 80%;
-  background-color: grey;
+  background-color: #545557;
   position: fixed;
   left: 10%;
   top: 1em;
+  border-radius: 10px;
+}
+
+.logo-btn-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.view-btn-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.view-btn-container .view-btn {
+  font-size: 0.5em;
+  width: 60%;
+  height: 30%;
+  background-color: #990000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.view-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 685px) {
+  .logo-btn-container {
+    flex-direction: column;
+  }
+  .view-btn-container {
+    width: 100%;
+    flex-direction: row;
+    align-items: space-around;
+  }
+  .view-btn-container .view-btn {
+    width: 40%;
+    font-size: 0.75em;
+  }
 }
 
 /* Navigation button styles */

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import ProjectCard from "./ProjectCard";
+
 import { ReactComponent as FishFriends } from "../images/coollogo_com-326361383.svg";
 import { ReactComponent as CoachMe } from "../images/coollogo_com-276021646.svg";
 import { ReactComponent as FoodieFun } from "../images/coollogo_com-279641067.svg";
@@ -26,12 +29,7 @@ function ProjectsComponent(props) {
   };
 
   if (expandCoachMe) {
-    return (
-      <div className='project-view-container'>
-        <h1>Single Project View!!!</h1>
-        <button onClick={() => handleClickReTransform()}>Back!!!</button>
-      </div>
-    );
+    return <ProjectCard handleClickReTransform={handleClickReTransform} />;
   } else {
     return (
       <div className='projects-container'>

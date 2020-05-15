@@ -41,8 +41,8 @@ function App() {
 
   useEffect(() => {
     console.log("crawlRef.current.clientHeight", crawlRef.current.clientHeight);
-    if (crawlRef.current.clientHeight == 0) {
-      setCrawlPos(550);
+    if (crawlRef.current.clientHeight === 0) {
+      setCrawlPos(1200);
     } else {
       setCrawlPos(crawlRef.current.clientHeight - 400);
     }

@@ -194,6 +194,55 @@ canvas {
   margin-bottom: 1em;
 }
 
+.project-content .image-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-content .image-container img {
+  width: 60%;
+  height: auto;
+}
+
+.project-btn-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-btn-container .project-btn {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  width: 90%;
+  height: 20%;
+  border-width: 5px 5px 5px 5px;
+  color: #f5c91c;
+  border-color: #f5c91c;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 0.5em;
+}
+
+.project-btn-div a {
+  display: flex;
+  padding: 7px 7px 2px 7px;
+}
+
+.project-btn svg {
+  width: 20%;
+  height: 20%;
+}
+
+.project-btn-div p {
+  margin: 0;
+}
+
 /* Navigation button styles */
 .cn-button {
   border: none;

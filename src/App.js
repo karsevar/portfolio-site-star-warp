@@ -13,6 +13,7 @@ import { ReactComponent as EmailSVG } from "./images/envelope-open-text-solid.sv
 function App() {
   const [crawlPos, setCrawlPos] = useState(0);
   const [scroll, setScroll] = useState(0);
+  const [transformBoolean, setTransformBoolean] = useState(false);
   const crawlRef = useRef(null);
   const [canvasStyle, canvasStyleSet] = useState({ width: 0, height: 0 });
   const [navBoolean, setNavBoolean] = useState(false);
@@ -96,10 +97,22 @@ function App() {
           </div>
           <div id='cn-overlay' class='cn-overlay'></div>
         </div>
-        <div id='crawl' ref={crawlRef}>
+        <div
+          id='crawl'
+          ref={crawlRef}
+          style={transformBoolean ? { transform: "none" } : {}}
+        >
           <div id='crawl-content' style={{ top: `${crawlPos}px` }}>
             <Route exact path='/' component={AboutComponent} />
-            <Route path='/projects' component={ProjectsComponent} />
+            <Route
+              path='/projects'
+              render={(props) => (
+                <ProjectsComponent
+                  {...props}
+                  setTransformBoolean={setTransformBoolean}
+                />
+              )}
+            />
             {/* <AboutComponent />
             <ProjectsComponent /> */}
           </div>

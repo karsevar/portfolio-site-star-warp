@@ -227,11 +227,16 @@ canvas {
   border-radius: 10px;
   background-color: transparent;
   font-size: 0.5em;
+  cursor: pointer;
 }
 
 .project-btn-div a {
+  color: #f5c91c;
+  text-decoration: none;
   display: flex;
+  justify-content: space-between;
   padding: 7px 7px 2px 7px;
+  text-align: center;
 }
 
 .project-btn svg {
@@ -240,7 +245,19 @@ canvas {
 }
 
 .project-btn-div p {
-  margin: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-left: 0.75em;
+  margin-bottom: 0;
+}
+
+.project-btn:hover {
+  background-color: #f5c91c;
+  color: black;
+}
+
+.project-btn-div a:hover {
+  color: black;
 }
 
 /* Navigation button styles */

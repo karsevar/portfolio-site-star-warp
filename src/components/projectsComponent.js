@@ -12,6 +12,8 @@ import { ReactComponent as ProjectSVG } from "../images/project-diagram-solid.sv
 import { ReactComponent as GithubSVG } from "../images/github-square-brands.svg";
 
 import CoachMeLogo from "../images/coollogo_com-113011439.png";
+import FishFriendsLogo from "../images/coollogo_com-1324236.png";
+import FoodieFunLogo from "../images/coollogo_com-1173231.png";
 
 function ProjectsComponent(props) {
   // console.log("props from app.js", props);
@@ -82,6 +84,65 @@ function ProjectsComponent(props) {
         appImage={coachMeImage}
         github={"https://github.com/coachmehealth"}
         appLink={"https://coach-me-health-development.netlify.app/"}
+      />
+    );
+  } else if (expandFishFriends) {
+    const summary = `FishFriends is a web application used by fishing enthusiasts to find public access water front facilities as well as 
+    review said facilities which can then be publicly viewed by all users.`;
+
+    const techUsed = [
+      "React was used to build out all the user interface components and logic",
+      "Node Sass for styling the facility review components and map overlay",
+      "Express to create the RESTful API framework for the server",
+      "SQL lite and Knex for database structure and query interface",
+      "React Map GL to render a map of Washington state and position the water facility sites according to latitude and longitude",
+    ];
+
+    const contributions = [
+      "Developed the database framework for saving water facility reviews",
+      "Discovered and utilized a water facilities API from the Fish and Wildlife Administration of Washington State for application site seed data",
+      "Created multiple endpoints for data read, write, and edit requests from the frontend application",
+    ];
+
+    return (
+      <ProjectCard
+        summary={summary}
+        techUsed={techUsed}
+        contributions={contributions}
+        handleClickReTransform={handleExitFishFriends}
+        logoImage={FishFriendsLogo}
+        appImage={fishFriendsImage}
+        github={"https://github.com/Build-Week-FishFriends"}
+        appLink={"https://fishfriends.netlify.app"}
+      />
+    );
+  } else if (expandFoodieFun) {
+    const summary = `FoodieFun is a personalized restaurant review web application. 
+    Users can write personalized reviews of any restaurant in their area and view old 
+    reviews when logged into their preexisting FoodieFun account.`;
+
+    const techUsed = [
+      "React for the user interface structure",
+      "Axios for pull, push, and put requests to the backend server",
+      "Semantic UI for basic component styling and application theme",
+    ];
+
+    const contributions = [
+      "Designed basic React component hierarchy",
+      "Instrumental in ensuring that CRUD functionality was achieved",
+      "Helped in navigating through merge conflicts and ensuring that after each push request the basic functionality and aesthetic of the application was maintained.",
+    ];
+
+    return (
+      <ProjectCard
+        summary={summary}
+        techUsed={techUsed}
+        contributions={contributions}
+        handleClickReTransform={handleExitFoodieFun}
+        logoImage={FoodieFunLogo}
+        appImage={foodieFunImage}
+        github={"https://github.com/buildweek-foodiefun"}
+        appLink={"https://bw-foodiefun.netlify.app/loginform"}
       />
     );
   } else {

@@ -11,25 +11,79 @@ import foodieFunImage from "../images/Screen Shot 2020-05-15 at 10.31.49 AM.png"
 import { ReactComponent as ProjectSVG } from "../images/project-diagram-solid.svg";
 import { ReactComponent as GithubSVG } from "../images/github-square-brands.svg";
 
+import CoachMeLogo from "../images/coollogo_com-113011439.png";
+
 function ProjectsComponent(props) {
   // console.log("props from app.js", props);
   const setTransformBoolean = props.setTransformBoolean;
 
   const [expandCoachMe, setExpandCoachMe] = useState(false);
+  const [expandFishFriends, setExpandFishFriends] = useState(false);
+  const [expandFoodieFun, setExpandFoodieFun] = useState(false);
 
-  const handleClickTransform = () => {
+  const handleClickCoachMe = () => {
     console.log("handle transform click pressed");
     setTransformBoolean(true);
     setExpandCoachMe(true);
   };
 
-  const handleClickReTransform = () => {
+  const handleClickFishFriends = () => {
+    setTransformBoolean(true);
+    setExpandFishFriends(true);
+  };
+
+  const handleClickFoodieFun = () => {
+    setTransformBoolean(true);
+    setExpandFoodieFun(true);
+  };
+
+  const handleExitCoachMe = () => {
     setTransformBoolean(false);
     setExpandCoachMe(false);
   };
 
+  const handleExitFishFriends = () => {
+    setTransformBoolean(false);
+    setExpandFishFriends(false);
+  };
+
+  const handleExitFoodieFun = () => {
+    setTransformBoolean(false);
+    setExpandFoodieFun(false);
+  };
+
   if (expandCoachMe) {
-    return <ProjectCard handleClickReTransform={handleClickReTransform} />;
+    const summary = `CoachMe is an interactive health coaching platform used by both
+    health coaches to improve their workflow with managing their
+    patients and patients to record and view their health metrics.`;
+
+    const techUsed = [
+      "React was used to build out all the user interface components and logic",
+      "Node Sass for all the styling within both the patient and health coach dashboards",
+      "Express to create the RESTful API framework for the server",
+      "Postgres SQL and Knex for database structure and query interface",
+      "Airtable for mirroring existing stakeholder data",
+      "Twilio for in app text messaging functionality",
+    ];
+
+    const contributions = [
+      "Was the sole backend developer for the project",
+      "Developed text message scheduling functionality for weekly and monthly reoccurance",
+      "Created framework to query and mirror Airtable data from stakeholder's past database",
+    ];
+
+    return (
+      <ProjectCard
+        summary={summary}
+        techUsed={techUsed}
+        contributions={contributions}
+        handleClickReTransform={handleExitCoachMe}
+        logoImage={CoachMeLogo}
+        appImage={coachMeImage}
+        github={"https://github.com/coachmehealth"}
+        appLink={"https://coach-me-health-development.netlify.app/"}
+      />
+    );
   } else {
     return (
       <div className='projects-container'>
@@ -41,7 +95,7 @@ function ProjectsComponent(props) {
             <img src={coachMeImage} />
             <div className='project-btn-container'>
               <button
-                onClick={() => handleClickTransform()}
+                onClick={() => handleClickCoachMe()}
                 className='project-btn'
               >
                 Learn More
@@ -76,7 +130,7 @@ function ProjectsComponent(props) {
             <img src={fishFriendsImage} />
             <div className='project-btn-container'>
               <button
-                onClick={() => handleClickTransform()}
+                onClick={() => handleClickFishFriends()}
                 className='project-btn'
               >
                 Learn More
@@ -113,7 +167,7 @@ function ProjectsComponent(props) {
             <img src={foodieFunImage} />
             <div className='project-btn-container'>
               <button
-                onClick={() => handleClickTransform()}
+                onClick={() => handleClickFoodieFun()}
                 className='project-btn'
               >
                 Learn More

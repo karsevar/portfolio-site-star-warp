@@ -7,19 +7,27 @@ import coachMeImage from "../images/coachme1.png";
 
 function ProjectCard(props) {
   const handleClickReTransform = props.handleClickReTransform;
+  const techUsed = props.techUsed;
+  const contributions = props.contributions;
+  const summary = props.summary;
+  const logoImage = props.logoImage;
+  const appImage = props.appImage;
+  const github = props.github;
+  const appLink = props.appLink;
+
   return (
     <div className='project-view-container'>
       <div className='logo-btn-container'>
-        <img src={CoachMeLogo} />
+        <img src={logoImage} />
         <div className='view-btn-container'>
           <div className='view-btn'>
-            <a href='https://coach-me-health-development.netlify.app/'>
+            <a href={appLink}>
               {/* <ProjectSVG /> */}
               <p>Visit App</p>
             </a>
           </div>
           <div className='view-btn'>
-            <a href='https://coach-me-health-development.netlify.app/'>
+            <a href={github}>
               {/* <ProjectSVG /> */}
               <p>Github</p>
             </a>
@@ -27,41 +35,20 @@ function ProjectCard(props) {
         </div>
       </div>
       <div className='text-content'>
-        <img src={coachMeImage} />
+        <img src={appImage} />
         <div className='text-container'>
-          <p>
-            CoachMe is an interactive health coaching platform used by both
-            health coaches to improve their workflow with managing their
-            patients and patients to record and view their health metrics.
-          </p>
+          <p>{summary}</p>
           <h4>Tech Used: </h4>
           <ul>
-            <li>
-              React was used to build out all the user interface components and
-              logic
-            </li>
-            <li>
-              Node Sass for all the styling within both the patient and health
-              coach dashboards
-            </li>
-            <li>Express to create the RESTful API framework for the server</li>
-            <li>
-              Postgres SQL and Knex for database structure and query interface
-            </li>
-            <li>Airtable for mirroring existing stakeholder data</li>
-            <li>Twilio for in app text messaging functionality</li>
+            {techUsed.map((tech) => {
+              return <li>{tech}</li>;
+            })}
           </ul>
           <h4>Contributions:</h4>
           <ul>
-            <li>Was the sole backend developer for the project</li>
-            <li>
-              Developed text message scheduling functionality for weekly and
-              monthly reoccurance
-            </li>
-            <li>
-              Created framework to query and mirror Airtable data from
-              stakeholder's past database
-            </li>
+            {contributions.map((contri) => {
+              return <li>{contri}</li>;
+            })}
           </ul>
         </div>
       </div>

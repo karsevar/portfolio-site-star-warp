@@ -59,7 +59,7 @@ function App() {
         style={{ width: canvasStyle.width, height: canvasStyle.height }}
       >
         {/* Navigation menu circular code */}
-        <NavSphere />
+        {transformBoolean ? <></> : <NavSphere />}
 
         <div
           id='crawl'

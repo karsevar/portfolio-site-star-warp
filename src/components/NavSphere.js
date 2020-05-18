@@ -16,7 +16,7 @@ function NavSphere(props) {
   return (
     <div class='component'>
       <button class='cn-button' id='cn-button' onClick={() => handleNavClick()}>
-        {navBoolean ? "-" : "+"}
+        {navBoolean ? "Close" : "Menu"}
       </button>
       <div
         class={navBoolean ? "cn-wrapper opened-nav" : "cn-wrapper"}

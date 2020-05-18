@@ -5,7 +5,7 @@ function ScrollComponent(props) {
   return (
     <div
       className='scrollable'
-      // style={transformBoolean ? { overflowY: "hidden" } : {}}
+      // style={transformBoolean ? { display: "none" } : {}}
     ></div>
   );
 }

@@ -35,15 +35,63 @@ function AboutComponent(props) {
   };
 
   if (techBoolean) {
+    const techArray = [
+      {
+        logo: NodeLogo,
+        description:
+          "Spinning up backend servers and creating user friendly APIs is really my greatest joy.",
+        github: "https://fish-friends.herokuapp.com/docs/",
+      },
+      {
+        logo: ReactLogo,
+        description:
+          "With about 2 years in React, I am more than confortable with building out React frontend applications",
+        github: "https://github.com/coachmehealth/coach-me-fe",
+      },
+    ];
     return (
       <TechCard
+        resourceArray={techArray}
         setBoolean={setTechBoolean}
         setTransformBoolean={setTransformBoolean}
       />
     );
   } else if (languageBoolean) {
+    const techArray = [
+      {
+        logo: PythonLogo,
+        description:
+          "I have been coding in Python for 2 years and am well versed in using it with numerious machine learning libraries.",
+        github: "https://github.com/karsevar/tensorflow_projects",
+      },
+      {
+        logo: RLogo,
+        description:
+          "R was the first programming language I learned and as such it holds a very special place in my heart",
+        github: "https://github.com/karsevar/R_for_Data_Science-",
+      },
+      {
+        logo: JSLogo,
+        description:
+          "JavaScript was the third language I learned and is currently the language that I'm most fluent in",
+        github: "https://github.com/coachmehealth/coach-me-be",
+      },
+      {
+        logo: HTMLLogo,
+        description:
+          "Just like with JavaScript, HTML5 was part of the primary curriculum at Lambda School",
+        github: "https://github.com/route-management-system/user-interface",
+      },
+      {
+        logo: CSSLogo,
+        description:
+          "Just like with JavaScript, HTML5 was part of the primary curriculum at Lambda School",
+        github: "https://github.com/buildweek-foodiefun/front-end",
+      },
+    ];
     return (
       <TechCard
+        resourceArray={techArray}
         setBoolean={setLanguageBoolean}
         setTransformBoolean={setTransformBoolean}
       />
@@ -96,6 +144,14 @@ function AboutComponent(props) {
             <button className='about-btn' onClick={() => handleTechClick()}>
               See More
             </button>
+          </div>
+        </fieldset>
+        <fieldset className='about-subcontainer'>
+          <legend>
+            <Algorithms />
+          </legend>
+          <div className='algorithms-container'>
+            <p>Latest Algorithm Challenge</p>
           </div>
         </fieldset>
         <fieldset className='about-subcontainer'>

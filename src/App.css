@@ -161,26 +161,58 @@ canvas {
   margin-bottom: 1em;
 }
 
-.about-subcontainer .svg-divider {
-  height: auto;
-  /* position: absolute; */
-  align-items: center;
-  right: 0;
-}
-
-.svg-divider svg {
-  width: 100%;
+@media (max-width: 490px) {
+  .about-subcontainer svg {
+    width: 10em;
+    height: auto;
+  }
 }
 
 .languages-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .language svg {
   width: 100px;
   height: 100px;
+}
+
+@media (max-width: 490px) {
+  .language svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* .about-subcontainer .about-btn {
+  height: 30%;
+  width: 30%;
+} */
+
+.about-btn-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-btn-container .about-btn {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  width: 90%;
+  height: 20%;
+  border-width: 5px 5px 5px 5px;
+  color: #f5c91c;
+  border-color: #f5c91c;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 0.5em;
+  cursor: pointer;
 }
 
 .project-content {

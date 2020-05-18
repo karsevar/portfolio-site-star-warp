@@ -141,7 +141,7 @@ canvas {
 }
 
 .scrollable {
-  height: 100000px;
+  height: 7000px;
   width: 100%;
   position: relative;
 }

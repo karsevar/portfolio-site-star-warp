@@ -25,19 +25,16 @@ function NavSphere(props) {
         <ul>
           <li>
             <Link to='/projects'>
-              {/* <span class='icon-picture'></span> */}
               <ProjectSVG />
             </Link>
           </li>
           <li>
             <Link to='/'>
-              {/* <span class='icon-headphones'></span> */}
               <UserSVG />
             </Link>
           </li>
           <li>
             <a href='#'>
-              {/* <span class='icon-home'></span> */}
               <EmailSVG />
             </a>
           </li>

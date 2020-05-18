@@ -68,7 +68,16 @@ function App() {
         >
           {/* {console.log("crawlRef variables", crawlRef.current.clientHeight)} */}
           <div id='crawl-content' style={{ top: `${crawlPos}px` }}>
-            <Route exact path='/' component={AboutComponent} />
+            <Route
+              exact
+              path='/'
+              render={(props) => (
+                <AboutComponent
+                  {...props}
+                  setTransformBoolean={setTransformBoolean}
+                />
+              )}
+            />
             <Route
               path='/projects'
               render={(props) => (
@@ -78,12 +87,10 @@ function App() {
                 />
               )}
             />
-            {/* <AboutComponent />
-            <ProjectsComponent /> */}
           </div>
         </div>
       </div>
-      <ScrollComponent />
+      <ScrollComponent transformBoolean={transformBoolean} />
     </>
   );
 }

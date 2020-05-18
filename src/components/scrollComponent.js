@@ -1,7 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 
 function ScrollComponent(props) {
-  return <div className='scrollable'></div>;
+  const transformBoolean = props.transformBoolean;
+  return (
+    <div
+      className='scrollable'
+      // style={transformBoolean ? { overflowY: "hidden" } : {}}
+    ></div>
+  );
 }
 
 export default ScrollComponent;

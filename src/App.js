@@ -7,6 +7,7 @@ import ScrollComponent from "./components/scrollComponent";
 import AboutComponent from "./components/aboutComponent";
 import NavSphere from "./components/NavSphere";
 import ProjectsComponent from "./components/projectsComponent";
+import ContactComponent from "./components/ContactComponent";
 
 function App() {
   const [crawlPos, setCrawlPos] = useState(0);
@@ -86,6 +87,10 @@ function App() {
                   setTransformBoolean={setTransformBoolean}
                 />
               )}
+            />
+            <Route
+              path='/contactme'
+              render={(props) => <ContactComponent {...props} />}
             />
           </div>
         </div>

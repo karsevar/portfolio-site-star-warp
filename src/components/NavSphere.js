@@ -34,9 +34,9 @@ function NavSphere(props) {
             </Link>
           </li>
           <li>
-            <a href='#'>
+            <Link to='/contactme'>
               <EmailSVG />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

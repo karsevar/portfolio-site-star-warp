@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import TechCard from "./TechCard";
+import AlgorithmsCard from "./AlgorithmsCard";
 
 import NameLogo from "../images/coollogo_com-72345118.svg";
 import ProfessionLogo from "../images/coollogo_com-209701667.svg";
@@ -19,8 +20,14 @@ import { ReactComponent as CSSLogo } from "../images/css3-brands.svg";
 function AboutComponent(props) {
   const [techBoolean, setTechBoolean] = useState(false);
   const [languageBoolean, setLanguageBoolean] = useState(false);
+  const [algorithmBoolean, setAlgorithmBoolean] = useState(false);
 
   const setTransformBoolean = props.setTransformBoolean;
+
+  const handleAlgorithmClick = () => {
+    setAlgorithmBoolean(true);
+    setTransformBoolean(true);
+  };
 
   const handleTechClick = () => {
     console.log("tech button has been clicked");
@@ -96,11 +103,54 @@ function AboutComponent(props) {
         setTransformBoolean={setTransformBoolean}
       />
     );
+  } else if (algorithmBoolean) {
+    const algorithmArray = [
+      {
+        title: "Reverse a doubly linked list",
+        description:
+          "https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/problem",
+        solution:
+          "https://github.com/karsevar/Code_Challenge_Practice/tree/master/reverse_doubly_linked_list",
+      },
+      {
+        title: "Inserting a Node into a Sorted Doubly Linked List",
+        description:
+          "https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem",
+        solution:
+          "https://github.com/karsevar/Code_Challenge_Practice/tree/master/doubly-linked-list-insertion",
+      },
+      {
+        title: "Plus minus",
+        description: "https://www.hackerrank.com/challenges/plus-minus/problem",
+        solution:
+          "https://github.com/karsevar/Code_Challenge_Practice/tree/master/plus-minus",
+      },
+    ];
+    return (
+      <AlgorithmsCard
+        algorithmArray={algorithmArray}
+        setBoolean={setAlgorithmBoolean}
+        setTransformBoolean={setTransformBoolean}
+      />
+    );
   } else {
     return (
       <div className='about-container'>
         <img src={NameLogo} className='svg-logo' />
         <img src={ProfessionLogo} className='svg-logo-subheader' />
+        <fieldset className='about-subcontainer'>
+          <legend>
+            <AboutSVG />
+          </legend>
+          <div className='background-container'>
+            <p>Hello There!</p>
+            <p>
+              My name is Mason Karsevar and I'm a full stack web developer with
+              experience coding in medium sized groups with JavaScript, CSS, and
+              HTML.
+            </p>
+          </div>
+        </fieldset>
         <fieldset className='about-subcontainer'>
           <legend>
             <TechStackSVG />
@@ -151,30 +201,32 @@ function AboutComponent(props) {
             <Algorithms />
           </legend>
           <div className='algorithms-container'>
-            <p>Latest Algorithm Challenge</p>
-          </div>
-        </fieldset>
-        <fieldset className='about-subcontainer'>
-          <legend>
-            <AboutSVG />
-          </legend>
-          <div className='background-container'>
-            <p>Hello There!</p>
-            <p>
-              My name is Mason Karsevar and I'm a full stack web developer with
-              experience coding professionally in vanilla JavaScript, HTML,
-              NodeJs, and React as well as hobby level experience in programming
-              machine learning algorithms and statistical analysis workflows
-              using R and the Python packages Scikit Learn and Tensorflow.
-            </p>
-            <p>
-              Please feel free on to contact me if you want to learn more about
-              my experience or just simply want to chat about computer
-              architecture and cool implementations for some novel algorithm.
-            </p>
-            <p>
-              As you can see from this site's design, I'm a little of a nerd....
-            </p>
+            <h4>Latest Algorithm Challenge</h4>
+            <div className='latest-algorithm'>
+              <div className='algorithm-title'>
+                <p>Reverse a doubly linked list</p>
+              </div>
+              <div className='algorithm-btns'>
+                <div className='solution-btn'>
+                  <a href='https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/problem'>
+                    Problem
+                  </a>
+                </div>
+                <div className='solution-btn'>
+                  <a href='https://github.com/karsevar/Code_Challenge_Practice/tree/master/reverse_doubly_linked_list'>
+                    Solution
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className='about-btn-container'>
+              <button
+                className='about-btn'
+                onClick={() => handleAlgorithmClick()}
+              >
+                See More
+              </button>
+            </div>
           </div>
         </fieldset>
       </div>

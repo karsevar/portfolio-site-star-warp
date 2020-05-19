@@ -98,7 +98,7 @@ canvas {
 }
 
 #crawl p {
-  text-align: justify;
+  /* text-align: justify; */
   width: 100%;
   /* margin: 0 0 1.25em 0; */
   line-height: 1.05em;
@@ -260,6 +260,104 @@ canvas {
 }
 
 .tech-view-container button {
+  width: 20%;
+  height: 10%;
+  background-color: #990000;
+  border-radius: 50px;
+  border-color: #990000;
+  font-size: 0.3em;
+  margin: 20px;
+  color: white;
+}
+
+.algorithms-container .latest-algorithm {
+  font-size: 0.6em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.algorithm-btns {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.algorithm-btns .solution-btn {
+  width: 40%;
+  height: 40%;
+  background-color: transparent;
+  border-color: #f5c91c;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solution-btn a {
+  text-decoration: none;
+  font-size: 0.7em;
+  text-align: center;
+  color: #f5c91c;
+}
+
+.algorithms-view-container {
+  width: 80%;
+  height: 80%;
+  position: fixed;
+  left: 10%;
+  top: 1em;
+  border-radius: 10px;
+  overflow-y: auto;
+  border-color: #f5c91c;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 5px;
+}
+
+.algorithm {
+  font-size: 0.6em;
+  display: flex;
+  margin: 0.5em;
+  justify-content: space-between;
+}
+
+.algorithm .challenge-title {
+  width: 40%;
+  margin-right: 1em;
+}
+
+.challenge-btns {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.challenge-btns .challenge-solution {
+  width: 120px;
+  height: 40px;
+  background-color: transparent;
+  border-color: #f5c91c;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.challenge-solution a {
+  text-decoration: none;
+  font-size: 0.7em;
+  text-align: center;
+  color: #f5c91c;
+}
+
+.algorithms-view-container button {
   width: 20%;
   height: 10%;
   background-color: #990000;

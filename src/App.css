@@ -56,7 +56,7 @@ canvas {
   margin: 0;
   perspective: calc(100vh * 0.4);
   height: 1000px;
-  width: 749px;
+  /* max-width: 800px; */
   z-index: 1;
   position: fixed;
   overflow: hidden;
@@ -70,6 +70,7 @@ canvas {
   bottom: -5%;
   height: 200%;
   overflow: hidden;
+  /* max-width: 800px; */
 
   transform: rotate3d(1, 0, 0, 45deg);
   transform-origin: 50% 100%;
@@ -142,7 +143,7 @@ canvas {
 
 .scrollable {
   height: 7000px;
-  width: 100%;
+  max-width: 800px;
   position: relative;
 }
 

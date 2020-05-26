@@ -4,6 +4,7 @@ import starImage from "../images/star.png";
 
 function StarWarpComponent(props) {
   let scene, camera, renderer, stars, starGeo;
+  const setTransformBoolean = props.setTransformBoolean;
 
   function init(canvasElement) {
     scene = new THREE.Scene({ canvas: canvasElement });
@@ -77,6 +78,7 @@ function StarWarpComponent(props) {
     init(canvasRef);
     window.addEventListener("resize", onWindowResize, false);
     function onWindowResize() {
+      setTransformBoolean(true);
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -84,6 +86,7 @@ function StarWarpComponent(props) {
         width: window.innerWidth,
         height: window.innerHeight,
       });
+      setTransformBoolean(false);
     }
 
     props.setCanvasStyles({

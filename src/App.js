@@ -53,7 +53,10 @@ function App() {
 
   return (
     <>
-      <StarWarpComponent setCanvasStyles={canvasStyleSet} />
+      <StarWarpComponent
+        setCanvasStyles={canvasStyleSet}
+        setTransformBoolean={setTransformBoolean}
+      />
       <div
         id='crawl-container'
         className='App'

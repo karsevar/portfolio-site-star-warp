@@ -13,6 +13,7 @@ function App() {
   const [crawlPos, setCrawlPos] = useState(0);
   const [scroll, setScroll] = useState(0);
   const [transformBoolean, setTransformBoolean] = useState(false);
+  const [resizeFlicker, setResizeFlicker] = useState(false);
   const crawlRef = useRef(null);
   const [canvasStyle, canvasStyleSet] = useState({ width: 0, height: 0 });
 
@@ -55,7 +56,7 @@ function App() {
     <>
       <StarWarpComponent
         setCanvasStyles={canvasStyleSet}
-        setTransformBoolean={setTransformBoolean}
+        setTransformBoolean={setResizeFlicker}
       />
       <div
         id='crawl-container'
@@ -63,6 +64,12 @@ function App() {
         style={{ width: canvasStyle.width, height: canvasStyle.height }}
       >
         {/* Navigation menu circular code */}
+        {console.log("crawlPos", crawlPos)}
+        {console.log(
+          "window width and height",
+          window.innerWidth,
+          window.innerHeight
+        )}
         {transformBoolean ? <></> : <NavSphere />}
 
         <div
@@ -98,7 +105,7 @@ function App() {
           </div>
         </div>
       </div>
-      <ScrollComponent transformBoolean={transformBoolean} />
+      <ScrollComponent transformBoolean={resizeFlicker} />
     </>
   );
 }

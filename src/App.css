@@ -216,6 +216,11 @@ canvas {
   cursor: pointer;
 }
 
+.about-btn:hover {
+  background-color: #f5c91c;
+  color: black;
+}
+
 .tech-view-container {
   width: 80%;
   height: 80%;
@@ -271,6 +276,11 @@ canvas {
   color: white;
 }
 
+.tech-view-container button:hover {
+  background-color: white;
+  color: #990000;
+}
+
 .algorithms-container .latest-algorithm {
   font-size: 0.6em;
   width: 100%;
@@ -303,6 +313,14 @@ canvas {
   font-size: 0.7em;
   text-align: center;
   color: #f5c91c;
+}
+
+.solution-btn:hover {
+  background-color: #f5c91c;
+}
+
+.solution-btn a:hover {
+  color: black;
 }
 
 .algorithms-view-container {
@@ -339,8 +357,10 @@ canvas {
 }
 
 .challenge-btns .challenge-solution {
-  width: 120px;
-  height: 40px;
+  /* width: 120px;
+  height: 40px; */
+  width: 40%;
+  height: auto;
   background-color: transparent;
   border-color: #f5c91c;
   border-style: solid;
@@ -358,6 +378,14 @@ canvas {
   color: #f5c91c;
 }
 
+.challenge-solution:hover {
+  background-color: #f5c91c;
+}
+
+.challenge-solution a:hover {
+  color: black;
+}
+
 .algorithms-view-container button {
   width: 20%;
   height: 10%;
@@ -367,6 +395,11 @@ canvas {
   font-size: 0.3em;
   margin: 20px;
   color: white;
+}
+
+.algorithms-view-container button:hover {
+  background-color: white;
+  color: #990000;
 }
 
 .project-content {
@@ -461,6 +494,17 @@ canvas {
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+.logo-btn-container img {
+  width: 50%;
+  height: auto;
+}
+
+@media (max-width: 490px) {
+  .logo-btn-container img {
+    width: 100%;
+  }
 }
 
 .view-btn-container {

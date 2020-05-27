@@ -64,12 +64,6 @@ function App() {
         style={{ width: canvasStyle.width, height: canvasStyle.height }}
       >
         {/* Navigation menu circular code */}
-        {console.log("crawlPos", crawlPos)}
-        {console.log(
-          "window width and height",
-          window.innerWidth,
-          window.innerHeight
-        )}
         {transformBoolean ? <></> : <NavSphere />}
 
         <div

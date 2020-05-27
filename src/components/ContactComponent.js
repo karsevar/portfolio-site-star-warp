@@ -6,6 +6,22 @@ import { ReactComponent as LinkedIn } from "../images/linkedin-brands.svg";
 import { ReactComponent as Github } from "../images/github-square-brands.svg";
 
 function ContactComponent(props) {
+  const [formState, setFormState] = useState({
+    name: "",
+    contactInfo: "",
+    comment: "",
+  });
+
+  const handleChange = (event) => {
+    setFormState({ ...formState, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    console.log("formState", formState);
+    event.preventDefault();
+    setFormState({ name: "", contactInfo: "", comment: "" });
+  };
+
   return (
     <div className='contact-me-container'>
       <fieldset className='contact-subcontainer'>
@@ -30,14 +46,31 @@ function ContactComponent(props) {
           <Email />
         </legend>
         <div className='email-container'>
-          <form className='contact-me-form'>
-            <input type='text' name='name' placeholder='Name' />
-            <input type='text' name='contact-info' placeholder='Email' />
+          <form
+            className='contact-me-form'
+            onSubmit={(event) => handleSubmit(event)}
+          >
+            <input
+              type='text'
+              name='name'
+              placeholder='Name'
+              value={formState.name}
+              onChange={(event) => handleChange(event)}
+            />
+            <input
+              type='text'
+              name='contactInfo'
+              placeholder='Email'
+              value={formState.contactInfo}
+              onChange={(event) => handleChange(event)}
+            />
             <textarea
               rows='5'
               cols='40'
               name='comment'
               placeholder='Please Input Comment Here...'
+              value={formState.comment}
+              onChange={(event) => handleChange(event)}
             ></textarea>
             <button className='contact-form-btn'>Send</button>
           </form>

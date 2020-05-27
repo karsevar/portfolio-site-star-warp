@@ -561,6 +561,68 @@ h4 {
   }
 }
 
+.contact-subcontainer {
+  width: 80%;
+  border-width: 10px 10px 10px 10px;
+  border-color: #f5c91c;
+  border-style: solid;
+  border-radius: 10px;
+  margin-left: 0.5em;
+  margin-bottom: 1em;
+}
+
+.contact-subcontainer .social-media {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-subcontainer .social-logo {
+  width: 100px;
+  height: 100px;
+  color: #f5c91c;
+}
+
+.social-logo a {
+  text-decoration: none;
+  color: #f5c91c;
+}
+
+.email-container .contact-me-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-me-form input,
+.contact-me-form textarea {
+  background-color: transparent;
+  border-color: #f5c91c;
+  font-size: 0.75em;
+  color: #f5c91c;
+  margin-bottom: 1em;
+  width: 90%;
+  border-width: 10px 10px 10px 10px;
+  border-radius: 10px;
+  border-style: solid;
+  padding: 0.25em;
+}
+
+.email-container .contact-form-btn {
+  color: #f5c91c;
+  border-color: #f5c91c;
+  border-style: solid;
+  border-radius: 10px;
+  background: transparent;
+  border-width: 10px 10px 10px 10px;
+  font-size: 0.75em;
+  width: 30%;
+  height: auto;
+}
+
+.contact-form-btn:hover {
+  background-color: #f5c91c;
+  color: black;
+}
+
 /* Navigation button styles */
 .cn-button {
   border: none;

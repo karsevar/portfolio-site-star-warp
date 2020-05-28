@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { ReactComponent as UserSVG } from "../images/user-alt-solid.svg";
+import { ReactComponent as UserSVG } from "../images/home-solid.svg";
 import { ReactComponent as ProjectSVG } from "../images/project-diagram-solid.svg";
 import { ReactComponent as EmailSVG } from "../images/envelope-open-text-solid.svg";
 

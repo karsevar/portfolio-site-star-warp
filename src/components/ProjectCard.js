@@ -17,6 +17,7 @@ function ProjectCard(props) {
 
   return (
     <div className='project-view-container'>
+      <button onClick={() => handleClickReTransform()}>Back</button>
       <div className='logo-btn-container'>
         <img src={logoImage} />
         <div className='view-btn-container'>
@@ -52,7 +53,6 @@ function ProjectCard(props) {
           </ul>
         </div>
       </div>
-      <button onClick={() => handleClickReTransform()}>Back</button>
     </div>
   );
 }

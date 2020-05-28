@@ -146,8 +146,7 @@ function AboutComponent(props) {
             <p>Hello There!</p>
             <p>
               My name is Mason Karsevar and I'm a full stack web developer with
-              experience coding in medium sized groups with JavaScript, CSS, and
-              HTML.
+              experience coding in JavaScript, CSS, and HTML.
             </p>
           </div>
         </fieldset>

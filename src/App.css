@@ -488,6 +488,7 @@ canvas {
   top: 1em;
   border-radius: 10px;
   overflow-y: auto;
+  padding-bottom: 0.5em;
 }
 
 .logo-btn-container {
@@ -550,7 +551,7 @@ canvas {
 
 #crawl .text-content p,
 h4 {
-  font-size: 0.6em;
+  font-size: 0.4em;
   text-align: left;
   margin-bottom: 0.25em;
 }
@@ -561,7 +562,7 @@ h4 {
 }
 
 #crawl .text-content li {
-  font-size: 0.4em;
+  font-size: 0.3em;
 }
 
 .project-view-container button {

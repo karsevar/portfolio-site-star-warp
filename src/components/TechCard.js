@@ -13,6 +13,7 @@ function TechCard(props) {
   };
   return (
     <div className='tech-view-container'>
+      <button onClick={() => handleBackClick()}>Back</button>
       {resourceArray.map((techObject) => {
         return (
           <div className='skill-view-container'>
@@ -28,7 +29,6 @@ function TechCard(props) {
           </div>
         );
       })}
-      <button onClick={() => handleBackClick()}>Back</button>
     </div>
   );
 }

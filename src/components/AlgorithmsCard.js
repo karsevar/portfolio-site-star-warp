@@ -12,6 +12,7 @@ function AlgorithmsCard(props) {
 
   return (
     <div className='algorithms-view-container'>
+      <button onClick={() => handleBackClick()}>Back</button>
       {algorithmArray.map((challenge) => {
         return (
           <div className='algorithm'>
@@ -29,7 +30,6 @@ function AlgorithmsCard(props) {
           </div>
         );
       })}
-      <button onClick={() => handleBackClick()}>Back</button>
     </div>
   );
 }

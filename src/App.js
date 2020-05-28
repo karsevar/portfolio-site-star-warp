@@ -80,6 +80,7 @@ function App() {
                 <AboutComponent
                   {...props}
                   setTransformBoolean={setTransformBoolean}
+                  setScrollBack={setResizeFlicker}
                 />
               )}
             />

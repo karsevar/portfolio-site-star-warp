@@ -16,6 +16,7 @@ import { ReactComponent as ReactLogo } from "../images/react-brands.svg";
 import { ReactComponent as JSLogo } from "../images/js-brands.svg";
 import { ReactComponent as HTMLLogo } from "../images/html5-brands.svg";
 import { ReactComponent as CSSLogo } from "../images/css3-brands.svg";
+import { ReactComponent as ProjectsSVG } from "../images/coollogo_com-4874472.svg";
 
 function AboutComponent(props) {
   const [techBoolean, setTechBoolean] = useState(false);
@@ -23,6 +24,7 @@ function AboutComponent(props) {
   const [algorithmBoolean, setAlgorithmBoolean] = useState(false);
 
   const setTransformBoolean = props.setTransformBoolean;
+  const setScrollBack = props.setScrollBack;
 
   const handleAlgorithmClick = () => {
     setAlgorithmBoolean(true);
@@ -39,6 +41,12 @@ function AboutComponent(props) {
     console.log("language button has been clicked");
     setLanguageBoolean(true);
     setTransformBoolean(true);
+  };
+
+  const handleProjectsClick = () => {
+    // console.log("props history", props);
+    window.scrollTo(0, 0);
+    props.history.push("/projects");
   };
 
   if (techBoolean) {
@@ -224,6 +232,22 @@ function AboutComponent(props) {
                 onClick={() => handleAlgorithmClick()}
               >
                 See More
+              </button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset className='about-subcontainer'>
+          <legend>
+            <ProjectsSVG />
+          </legend>
+          <div className='background-container'>
+            <p>Click here to view projects....</p>
+            <div className='about-btn-container'>
+              <button
+                className='about-btn'
+                onClick={() => handleProjectsClick()}
+              >
+                Projects
               </button>
             </div>
           </div>
